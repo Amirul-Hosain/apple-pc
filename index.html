@@ -11,7 +11,99 @@
 </head>
 
 <body>
+    <main class="total-page">
+        <!-- computer image part -->
+        <div class="computer-left-part">
+            <div>
+                <img src="images/mac.png" alt="">
+            </div>
+        </div>
 
+        <div class="computer-right-part">
+
+            <!-- header part -->
+            <section>
+                <header>
+                    <div class="computer-info">
+                        <h1>Customize your Blue 24-inch iMac with Apple M1 chip.</h1>
+                        <p>Apple M1 chip with 8-core CPU with 4 performancs cores and 4 efficiency cores, 7-core GPU,
+                            and 16-core Neural Engine 8GB unified memory 256 GB SSD storage Two Thunderbolt/USB 4ports
+                            Magic Mouse Keybord- US Enlish.</p>
+                    </div>
+                </header>
+            </section>
+
+            <!-- mid part -->
+
+            <section>
+                <div class="details">
+                    <h2>Memory</h2>
+                    <button id="memory-8gb" class="button">8GB unifid memory</button>
+                    <button id="memory-16gb" class="button">16GB unifid memory</button>
+                </div>
+            </section>
+
+            <!-- storage section -->
+            <section>
+                <div class="details">
+                    <h2>Storage</h2>
+                    <button id="256gb-storage" class="button">256Gb SSD card storage</button>
+                    <button id="512gb-storage" class="button">512GB SSD card storage</button>
+                    <button id="1tr-storage" class="button">1TB SSD card storage</button>
+                </div>
+            </section>
+
+
+            <!-- delivery option -->
+            <section>
+                <div class="details">
+                    <h2>Choose your delivery option</h2>
+                    <button id="delivery-cost" class="button">Friday, Aug 25 FREE Prime Delivery</button>
+                    <button id="delivery-cost-20" class="button">Friday, Aug 25 FREE Prime Delivery charg $20</button>
+                </div>
+            </section>
+
+
+            <!-- price cost section -->
+            <div class="price-details">
+                <h2 class="price-title">Best Price</h2>
+                <p>$<span id="fixed-price">1299</span></p>
+            </div>
+            <div class="price-details">
+                <h2 class="price-title">Extra Memory Cost</h2>
+                <p>$<span id="memory-cost">0</span></p>
+            </div>
+            <div class="price-details">
+                <h2 class="price-title">Extra Storage Cost</h2>
+                <p>$<span id="storage-cost">0</span></p>
+            </div>
+            <div class="price-details">
+                <h2 class="price-title">Delivery Charg</h2>
+                <p>$<span id="delivery-charg">0</span></p>
+            </div>
+            <div class="price-details" style="border-top: 2px solid black;">
+                <h2 class="price-title">Total Price</h2>
+                <p>$<span id="total-price">0</span></p>
+            </div>
+
+
+            <!-- Add pomo code -->
+            <section>
+                <div class="pomo-code">
+                    <h2>Add Pomo code</h2>
+                    <input id="input-code" class="input-code" type="text">
+                    <button id="apply-button" class="pomo-button">Apply</button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <footer>
+        <div class="computer-bottom">
+            <h1>Total:</h1>
+            <p> $<span id="total-cost">1299</span></p>
+        </div>
+    </footer>
 
     <!-- js link -->
     <script src="app.js"></script>
