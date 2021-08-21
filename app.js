@@ -98,94 +98,14 @@ function updateToalDelivery() {
 
 
 //promo code use
-function promoCodeApply() {
-    const inputPomoCode = document.getElementById('input-code');
-    const totalCostComp = document.getElementById('total-cost');
-    const totalCostCompNum = parseInt(totalCostComp).innerText;
-    const inputPomoCodeDigit = parseInt(inputPomoCode).value;
-    if (inputPomoCodeDigit == 'stevekaku') {
-        const newTotal = (totalCostCompNum * 20) / 100;
-        totalCostCompNum = newTotal;
-    }
-}
 document.getElementById('apply-button').addEventListener('click', function () {
-    promoCodeApply()
+    const inputPomo = document.getElementById('input-code');
+    const inputPomoCode = inputPomo.value;
+    const newTotal = document.getElementById('total-cost');
+    const newTotalText = newTotal.innerText;
+    if (inputPomoCode == 'stevekaku') {
+        newTotalText = (inputPomoCode * ('20 %')) / 100;
+        inputPomoCode = newTotal;
+    }
 })
 
-
-
-//-------------tried this system but can't shoing output
-
-// document.getElementById('memory-8gb').addEventListener('click', function () {
-//     const memory8gb = document.getElementById('memory-cost');
-//     memory8gb.innerText = 0;
-// })
-// document.getElementById('memory-16gb').addEventListener('click', function () {
-//     const memory16gb = document.getElementById('memory-cost');
-//     const memory16gbFloat = parseFloat(memory16gb);
-//     memory16gb.innerText = 180;
-
-//     //total price
-//     const totalPrice = document.getElementById('total-price');
-//     const totalPriceText = totalPrice.innerText;
-//     totalPrice.innerText = parseFloat(totalPriceText) + memory16gbFloat;
-
-//     //total cost 
-//     const totalCost = document.getElementById('total-cost');
-//     const totalCostText = totalCost.innerText;
-//     const totalCostFloat = parseFloat(totalCostText);
-//     const totalCostNew = totalCostFloat + memory16gb;
-//     totalCost.innerText = totalCostNew;
-//     // totalCost.innerText = parseFloat(totalCostText) + memory16gb;
-// })
-
-
-
-
-
-// const storage256 = document.getElementById('256gb-storage');
-// const storage512 = document.getElementById('512gb-storage');
-// const storage1Tb = document.getElementById('1tb-storage');
-// const extraStorage = document.getElementById('storage-cost');
-
-// storage256.addEventListener('click', function () {
-//     extraStorage.innerText = 0;
-// })
-// storage512.addEventListener('click', function () {
-//     extraStorage.innerText = 100;
-// })
-// storage1Tb.addEventListener('click', function () {
-//     extraStorage.innerText = 180;
-// })
-
-
-
-
-
-// //-------------------------memory cost---------------------------
-// function memoryItemsCost(inputid) {
-//     const memoryPrice = document.getElementById('memory-cost');
-//     const memoryPriceNumber = memoryPrice.innerText;
-
-//     if (inputid == true) {
-//         memoryPrice.innerText = parseInt(memoryPriceNumber) + 180;
-//     }
-//     else if (memoryPriceNumber > 0) {
-//         memoryPrice.innerText = parseInt(memoryPriceNumber) - 180;
-//     }
-//     // memoryPrice.innerText = memoryPriceNumber;
-
-//     // total price
-//     const totalPrice = document.getElementById('total-price');
-//     totalPrice.innerText = parseInt(memoryPriceNumber) + 1299;
-//     // total cost
-//     const totalCost = document.getElementById('total-cost');
-//     totalCost.innerText = parseInt(memoryPriceNumber) + 1299;
-// }
-
-// document.getElementById('memory-8gb').addEventListener('click', function () {
-//     memoryItemsCost(true);
-// })
-// document.getElementById('memory-16gb').addEventListener('click', function () {
-//     memoryItemsCost(false);
-// })
